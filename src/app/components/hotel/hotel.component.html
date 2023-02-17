@@ -1,0 +1,25 @@
+<app-nav></app-nav>
+<div class="jumbotron">
+  <h1 class="display-4">Encuentra tu hotel</h1>
+  <p class="lead">Te ofrecemos gran variedad de hoteles para ir donde tu quieras.</p>
+  <hr class="my-4">
+  <p>Conoce Nuestras Habitaciones y Disfruta de un Hospedaje Cómodo y Placentero. ¡Visítanos! El Descanso y la Tranquilidad Están a Tu Alcance en Nuestras Suites.</p>
+
+</div>
+<div class="container">
+  <div class="row">
+<div class="card col-md-5" style="width: 18rem;" *ngFor=" let hotel of hoteles">
+<button class="btn btn-danger" (click)="deleteHotel(hotel.id_hotel)"> Borrar</button>
+
+  <div class="card-body">
+    
+    <h3 class="card-title">  {{hotel.HotelName}}</h3>
+    <p class="card-text"> Noche: ${{hotel.Precio}}</p>
+    <p class="card-text">Categoria: {{hotel.CategoriaDescripcion}}</p>
+    <a [routerLink]="['/hoteles/',hotel.id_hotel]" class="btn btn-primary btn-block">ver más</a>
+    <a [routerLink]="['/hoteles/edit/',hotel.id_hotel]" class="btn btn-info btn-block">editar</a>
+  </div>
+</div>
+</div>
+</div>
+<app-footer></app-footer>

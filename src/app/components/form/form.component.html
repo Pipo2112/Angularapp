@@ -1,0 +1,42 @@
+<div class="col-md-6 offset-md-1">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label> Nombre </label>
+                    <input type="text" name="UserName" [(ngModel)]="user.nombre" placeholder="Nombre del user" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <label> email </label>
+                    <input type="text" name="UserEmail" [(ngModel)]="user.email" placeholder="emailr" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <label> edad </label>
+                    <input type="number" name="UserEdad" [(ngModel)]="user.edad" placeholder="edad" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <label> telefono </label>
+                    <input type="number" name="Usertelefono" [(ngModel)]="user.telefono" placeholder="telefono" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <label>  estado </label>
+                    <input type="text" name="UserName" [(ngModel)]="user.estado" placeholder=" estado" class="form-control" autofocus>
+                </div>
+
+                  <hr>
+                <button class="btn btn-success btn-block" (click)=" edit ? updateUser() : NewUser()"> Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card card-body text-center">
+    <h3> {{user.id_user}}</h3>
+     <h3>  {{user.nombre}}</h3>
+     <h3> {{user.email}}</h3>
+     <h3> {{user.edad}}</h3>
+     <h3>  {{user.telefono}}</h3>
+     <h3> {{user.estado}}</h3>
+    </div>
+</div>
+

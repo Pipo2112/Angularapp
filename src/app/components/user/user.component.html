@@ -1,0 +1,18 @@
+<div class="container">
+
+    <div class="row">
+<div class="card col-md-10" style="width: 18rem;" >
+  <div class="card col-md-4" style="width: 18rem;" *ngFor=" let user of users"></div>
+    <div class="card-body">
+      
+      <h3 class="card-title"> Nombre: {{user.nombre}}</h3>
+      <!-- <p class="card-text"> Noche: ${{user.Precio}}</p>
+      <p class="card-text">Categoria: {{user.CategoriaDescripcion}}</p> -->
+
+      <a [routerLink]="['/users/edit/',user.id_user]" class="btn btn-info ">editar</a>
+     
+    </div>
+  </div>
+</div>
+
+</div>
